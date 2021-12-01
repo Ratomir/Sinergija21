@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "SendMultipleMessages": {
+      "commandName": "Project",
+      "commandLineArgs": "10",
+      "environmentVariables": {
+        "QueueConnectionString1": "DefaultEndpointsProtocol=https;AccountName=stsinergija21queue;AccountKey=9lZXXj1KaWt3F0zPr7JD7vLt8lUbVt7DE4QNo+SknnkZ+IlK66aP4nDPEsUpq9iWHriTJUDVHcQT9z5jFbmyPg==;EndpointSuffix=core.windows.net",
+        "Queue1": "in-multiple-1",
+        "QueueConnectionString2": "DefaultEndpointsProtocol=https;AccountName=stsinergija21queue;AccountKey=9lZXXj1KaWt3F0zPr7JD7vLt8lUbVt7DE4QNo+SknnkZ+IlK66aP4nDPEsUpq9iWHriTJUDVHcQT9z5jFbmyPg==;EndpointSuffix=core.windows.net",
+        "Queue2": "in-multiple-2"
+      }
+    }
+  }
+}

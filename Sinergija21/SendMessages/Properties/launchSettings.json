@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "SendMessages": {
+      "commandName": "Project",
+      "commandLineArgs": "25",
+      "environmentVariables": {
+        "QueueSinergija21": "DefaultEndpointsProtocol=https;AccountName=stsinergija21queue;AccountKey=9lZXXj1KaWt3F0zPr7JD7vLt8lUbVt7DE4QNo+SknnkZ+IlK66aP4nDPEsUpq9iWHriTJUDVHcQT9z5jFbmyPg==;EndpointSuffix=core.windows.net",
+        "Queue": "in-multiple-1"
+      }
+    }
+  }
+}

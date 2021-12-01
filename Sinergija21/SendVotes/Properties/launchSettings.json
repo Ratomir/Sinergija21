@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "SendVotes": {
+      "commandName": "Project",
+      "commandLineArgs": "1",
+      "environmentVariables": {
+        "QueueSinergija21": "DefaultEndpointsProtocol=https;AccountName=stsinergija21;AccountKey=c+agovfKKnwTNEgVcArhzNNqHORIAdLGkttEFCC7jPJwuWnH0hEaSXI4FLlNqBj72X5XbAxiILd3gX71G934QQ==;EndpointSuffix=core.windows.net",
+        "Queue": "in-votes"
+      }
+    }
+  }
+}

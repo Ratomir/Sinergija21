@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleQueueTrigger", "SimpleQueueTrigger\SimpleQueueTrigger.csproj", "{55ECEC06-5324-4378-8C76-B2B68DB4EC2B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SendMessages", "SendMessages\SendMessages.csproj", "{AE316208-50AD-492C-B319-81B9926DC159}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultipleTrigger", "MultipleTrigger\MultipleTrigger.csproj", "{E34D900C-1E3D-4451-A381-6C6696B2619C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Triggers", "Triggers", "{D3AEA3F9-9250-4B73-AE4A-86E68C8D9DE4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SendMultipleMessages", "SendMultipleMessages\SendMultipleMessages.csproj", "{8C6408F1-6D3F-4D3C-BB93-039936080395}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendVotes", "SendVotes\SendVotes.csproj", "{B928675F-210E-4841-9FB5-D74C172131C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{6C02371C-A3C7-4DB7-AE39-71E6FAA266F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55ECEC06-5324-4378-8C76-B2B68DB4EC2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55ECEC06-5324-4378-8C76-B2B68DB4EC2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55ECEC06-5324-4378-8C76-B2B68DB4EC2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55ECEC06-5324-4378-8C76-B2B68DB4EC2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE316208-50AD-492C-B319-81B9926DC159}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE316208-50AD-492C-B319-81B9926DC159}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE316208-50AD-492C-B319-81B9926DC159}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE316208-50AD-492C-B319-81B9926DC159}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E34D900C-1E3D-4451-A381-6C6696B2619C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E34D900C-1E3D-4451-A381-6C6696B2619C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E34D900C-1E3D-4451-A381-6C6696B2619C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E34D900C-1E3D-4451-A381-6C6696B2619C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C6408F1-6D3F-4D3C-BB93-039936080395}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C6408F1-6D3F-4D3C-BB93-039936080395}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C6408F1-6D3F-4D3C-BB93-039936080395}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C6408F1-6D3F-4D3C-BB93-039936080395}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B928675F-210E-4841-9FB5-D74C172131C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B928675F-210E-4841-9FB5-D74C172131C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B928675F-210E-4841-9FB5-D74C172131C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B928675F-210E-4841-9FB5-D74C172131C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C02371C-A3C7-4DB7-AE39-71E6FAA266F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C02371C-A3C7-4DB7-AE39-71E6FAA266F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C02371C-A3C7-4DB7-AE39-71E6FAA266F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C02371C-A3C7-4DB7-AE39-71E6FAA266F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AE316208-50AD-492C-B319-81B9926DC159} = {D3AEA3F9-9250-4B73-AE4A-86E68C8D9DE4}
+		{8C6408F1-6D3F-4D3C-BB93-039936080395} = {D3AEA3F9-9250-4B73-AE4A-86E68C8D9DE4}
+		{B928675F-210E-4841-9FB5-D74C172131C6} = {D3AEA3F9-9250-4B73-AE4A-86E68C8D9DE4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E405F990-D8FF-442E-9A4B-13B1E71D440D}
+	EndGlobalSection
+EndGlobal

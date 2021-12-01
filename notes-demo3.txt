@@ -1,0 +1,25 @@
+
+$Env:QUEUE_ACCOUNT_NAME='stsinergija21';
+$Env:TABLE_ACCOUNT_NAME='stsinergija21';
+$Env:WEB_JOB_ACCOUNT_NAME='stsinergija21webjobs';
+
+$Env:QUEUE=$(az storage account show-connection-string --name $Env:QUEUE_ACCOUNT_NAME --query connectionString -o tsv)
+$Env:TABLE=$(az storage account show-connection-string --name $Env:TABLE_ACCOUNT_NAME --query connectionString -o tsv)
+$Env:WebJob=$(az storage account show-connection-string --name $Env:WEB_JOB_ACCOUNT_NAME --query connectionString -o tsv)
+
+$Env:registry_login_server='crsinergija21.azurecr.io';
+$Env:registry_password=$(az acr credential show -n crsinergija21 --query passwords[0].value);
+$Env:registry_username=$(az acr credential show -n crsinergija21 --query username)
+
+az containerapp create `
+  --resource-group "rg-sinergija21" `
+  --name votes `
+  --environment "sinergija21" `
+  --registry-login-server $Env:registry_login_server `
+  --registry-password $Env:registry_password `
+  --registry-username $Env:registry_username `
+  --cpu 0.5 --memory 1.0Gi `
+  --min-replicas 2 `
+  --image crsinergija21.azurecr.io/votestrigger `
+  --secrets "queue=$Env:QUEUE,table=$Env:TABLE,webjob-connection-string=$Env:WebJob" `
+  --environment-variables "QueueStorage=secretref:queue,TableStorage=secretref:table,AzureWebJobsStorage=secretref:webjob-connection-string"

@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "SimpleQueueTrigger": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "httpPort": 31754,
+      "useSSL": false
+    }
+  }
+}

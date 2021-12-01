@@ -1,0 +1,16 @@
+build and push
+docker build . -t crsinergija21.azurecr.io/web:1 -f .\Web\Dockerfile
+docker push crsinergija21.azurecr.io/web:1
+
+az containerapp create `
+  --resource-group "rg-sinergija21" `
+  --name votes `
+  --environment "sinergija21" `
+  --registry-login-server $Env:registry_login_server `
+  --registry-password $Env:registry_password `
+  --registry-username $Env:registry_username `
+  --cpu 0.5 --memory 1.0Gi `
+  --min-replicas 2 `
+  --image crsinergija21.azurecr.io/votestrigger `
+  --secrets "queue=$Env:QUEUE,table=$Env:TABLE,webjob-connection-string=$Env:WebJob" `
+  --environment-variables "QueueStorage=secretref:queue,TableStorage=secretref:table,AzureWebJobsStorage=secretref:webjob-connection-string"

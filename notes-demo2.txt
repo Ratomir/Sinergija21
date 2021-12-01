@@ -1,0 +1,23 @@
+
+$Env:QUEUE_ACCOUNT_NAME_1='stsinergija21queue';
+$Env:QUEUE_ACCOUNT_NAME_2='stsinergija21queue';
+$Env:WEB_JOB_ACCOUNT_NAME='stsinergija21webjobs';
+
+$Env:QUEUE1=$(az storage account show-connection-string --name $Env:QUEUE_ACCOUNT_NAME_1 --query connectionString -o tsv)
+$Env:QUEUE2=$(az storage account show-connection-string --name $Env:QUEUE_ACCOUNT_NAME_2 --query connectionString -o tsv)
+$Env:WebJob=$(az storage account show-connection-string --name $Env:WEB_JOB_ACCOUNT_NAME --query connectionString -o tsv)
+
+$Env:registry_login_server='crsinergija21.azurecr.io';
+$Env:registry_password=$(az acr credential show -n crsinergija21 --query passwords[0].value);
+$Env:registry_username=$(az acr credential show -n crsinergija21 --query username)
+
+az containerapp create `
+  --resource-group "rg-sinergija21" `
+  --name multipletrigger `
+  --environment "sinergija21" `
+  --registry-login-server $Env:registry_login_server `
+  --registry-password $Env:registry_password `
+  --registry-username $Env:registry_username `
+  --image crsinergija21.azurecr.io/multipletrigger `
+  --secrets "queue-1=$Env:QUEUE1,queue-2=$Env:QUEUE2,webjob-connection-string=$Env:WebJob" `
+  --environment-variables "Queue1=secretref:queue-1,Queue2=secretref:queue-2,AzureWebJobsStorage=secretref:webjob-connection-string"
